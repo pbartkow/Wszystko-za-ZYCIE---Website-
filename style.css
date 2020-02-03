@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.wrapper{
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+   
+}
+.menu{
+    position: fixed; 
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 50%;
+    height: 0;
+    width: 100vw;
+    max-width: 1280px;
+    transform: translateX(-50%);
+    background-color:rgba(230, 202, 170, 0.7);
+    z-index: 1;
+}
+.menu a{
+    display: none;
+    flex-grow: 1;
+    height: 80%;
+    border-right: 2px solid white;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 60px;
+    color: white;
+    transition: .3s linear;
+}
+.menu a:nth-child(4){
+    border-right: none;
+}
+.menu a:hover {
+    background-color:rgb(194, 170, 144);
+}
+.burger{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    top: 8px;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: white;
+    background-color:#333;
+    transition: .2s linear;
+    z-index: 1;
+}
+.burger i{
+    line-height: 55px;
+}
+.burger.move{
+    top: 65px;
+}
+.burger:hover {
+    background-color:transparent;
+    color: black
+}
+.burger .fas{
+    display: none;
+}
+.burger .fas.show{
+    display: block;
+    transform: .3s linear;
+}
+.burger.active + .menu{
+    height: 60px;
+    transition: .3s linear;
+}
+.burger.active + .menu a{
+    display: block;
+    line-height: 48px;
+    transition: .3s linear;
+}
+.baner{
+    height: 80vh;
+    padding-top: 10px;
+}
+.baner img{
+    width: 100%;
+    height: 100%;
+}
+h1{
+    margin-top: 10px;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-size: 35px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background-color:rgba(230, 202, 170, 1);
+}
+.art1,.art2,.art3{
+    display: flex;
+    flex-direction: column;
+}
+.flex, .flex2, .flex3, .flex4{
+    display: flex;
+    min-height: 55vh;
+}
+.flex2, .flex4{
+    flex-direction: row-reverse;
+}
+/* SEKCJA 1 */
+.text{
+    position: relative;
+    margin: auto 10px;
+    font-size: 19.5px;
+    flex-basis: 70%;
+    line-height: 2;
+    text-align: justify;
+}
+.text a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .2s linear;
+    border-radius: 2px;
+}
+.text a:hover, .text3 a:hover{
+    background-color: rgb(223, 223, 223);
+}
+.photo{
+    flex-basis: 30%;
+}
+.flex .photo img{
+    padding-top: 10px;
+    width: 100%;
+}
+.art1 .text .fb{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    background-color: rgb(134, 134, 134);
+    color: white;
+    text-transform: uppercase;
+    transition: .2s linear;
+}
+.art1 .text .fb:hover{
+    background-color: rgb(73,73,73);
+}
+/* SEKCJA 2 */
+.photo2{
+    flex-basis: 40%;
+}
+.photo2 img{
+    width: 100%;
+    height: 100%;
+}
+.text2{
+    flex-basis: 60%;
+    margin: auto 10px;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 2;  
+}
+/* SEKCJA 3 */
+.art3 h1{
+    height: 72px;
+    font-size: 30px;
+    line-height: 38px;
+}
+.photo3 {
+    flex-basis: 40%;
+}
+.photo3 img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;  
+}
+.text3{
+    flex-basis: 60%;
+    margin: auto 10px;
+    line-height: 1.8;
+    text-align: justify;
+    font-size: 16.5px;
+}
+.text3 a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s linear;
+}
+/* SEKCJA 4 */
+.photo4{
+    flex-basis: 35%;
+}
+.photo4 img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;  
+}
+.text4{
+    flex-basis: 65%;
+    position: relative;
+}
+.text4 .contactCharity, .contactVoice{
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.text4 .contactCharity{
+    top: 35px; 
+}
+.text4 p{
+    padding: 10px;
+}
+.text4 span{
+    padding-right: 8px;
+    margin-right: 8px;
+    text-transform: none;
+    border-right: 2px solid black ;
+    color: crimson;
+}
+.text4 .contactVoice{
+    bottom: 35px;
+}
+.head{
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: #333;  
+}
+/* ANIMACJE */
+.art1, .art3{
+    transform: translateX(-100vw);
+}
+.art2, .art4{
+    transform: translateX(100vw);
+}
+.art1.active, .art2.active, .art3.active, .art4.active{
+    transform: translateX(0);
+    transition: .7s linear;
+}
+.article{
+    transition: .7s linear;
+}
+/* STOPKA */
+footer{
+    position: absolute;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    background-color:#333;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+}
+/* MEDIA QUERIES */
+@media(max-width: 1024px){
+    .text{
+        margin: auto 0;
+    }
+    .text, .text3, .text2{
+        font-size: 15px;
+    }
+    h1, .art3 h1{
+        font-size: 20px ;
+    }
+    .photo3 img{
+        height: 100%;
+    }
+    .flex .photo {
+        margin: auto 0;
+    }
+    .burger{
+        height: 45px;
+        width: 45px;
+        font-size: 30px;
+        left: 8px;
+    }
+    .burger i{
+        line-height: 45px;
+    }
+}
+@media(max-width: 790px){
+    .flex, .flex2, .flex3, .flex4{
+        flex-direction: column;
+    }
+    .photo4 img{
+        display: none;
+    }
+    .text4 .contactCharity, .contactVoice{
+        position: unset;
+    }
+    .text4 .contactCharity{
+        margin-top: 50px;
+    }
+    .text4 .contactVoice{
+        margin-top: 100px;
+    }
+    .baner img{
+        display: none;
+    }
+    .baner{
+        height: 60vh;
+        margin: 0 auto;
+        background-image: url("img/baner-www_maly.jpg");
+        background-size: cover;
+    }
+    .art1, .art3, .art2, .art4{
+        transform: translateX(0);
+    }
+    .art3 h1{
+        font-size: 15px;
+    }
+    .art1 .text .fb{
+        right: 0;
+    }
+}
+@media(max-width: 640px){
+    .menu a{
+        font-size: 12px;
+    }
+    .baner{
+        height: 60vh;
+        background-image: url("img/baner-ww_b_maly.jpg");
+        background-size: cover;
+    }
+    .burger{
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        left: 8px;
+        top: 2px;
+    }
+    .burger i{
+        line-height: 30px;
+    }
+    .text4 .contactCharity, .contactVoice{
+        font-size: 15px;
+    }
+    .text4 .contactCharity{
+        margin-top: 0;
+    }
+    .art1 .text .fb{
+        right: 15px;
+    }
+    .art3 h1{
+        font-size: 12px;
+    }
+}
+@media(max-width: 411px){
+    nav{
+        display: none;
+    }
+    .burger{
+        display: none;
+    }
+    .baner{
+        height: 60vh;
+        background-image: url("img/verysmall.jpg");
+        background-size: cover;
+    }
+    .art1 .text .fb{
+        font-size: 12px;
+        right: 5px;
+    }
+    .art3 h1{
+        display: none;
+    }
+    .text, .text3, .text2, .text4{
+        font-size: 12px;
+    }
+    .head{
+        font-size: 15px;
+    }
+    .text4 .contactCharity, .contactVoice{
+        font-size: 12px;
+    }
+
+}
+@media(max-width: 375px){
+    .baner{
+        background-position: center;
+    }
+}
+@media(max-width: 812px) and (orientation: landscape){
+    nav, .burger{
+        display: none;
+    }
+    .art1, .art3, .art2, .art4{
+        transform: translateX(0);
+    }
+    .photo4 img{
+        display: none;
+    }  
+    .text4 .contactCharity, .contactVoice{
+        font-size: 12px;
+    }  
+    .head{
+        font-size: 15px;
+    }
+    .text4 .contactCharity, .contactVoice{
+        position: unset;
+    }
+    .text{
+        padding: 4px;
+        font-size: 12.5px;
+    }
+
+}
+@media(max-width: 736px) and (orientation: landscape){
+    .baner{
+        background-image: url("img/baner-ww_b_maly.jpg");
+    }
+    
+}
+@media(max-width: 640px) and (orientation: portrait){
+    .baner{
+        background-image: url("img/verysmall.jpg");
+    }
+}
